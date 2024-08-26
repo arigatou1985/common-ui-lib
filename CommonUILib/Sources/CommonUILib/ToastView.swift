@@ -8,13 +8,22 @@
 import SwiftUI
 
 public struct ToastView: View {
-    public init(message: String) {
+    public init(message: String, isShowing: Binding<Bool>) {
         self.message = message
+        self._isShowing = isShowing
     }
     
     public var body: some View {
-        messageView
+        VStack {
+            if isShowing {
+                messageView
+                    .opacity(isShowing ? 1 : 0)
+                    .animation(.easeInOut, value: isShowing)
+            }
+        }
     }
+    
+    @Binding public var isShowing: Bool
     
     private var messageView: some View {
         Text(message)
@@ -45,5 +54,5 @@ public struct ToastView: View {
 }
 
 #Preview {
-    ToastView(message: "Element selected")
+    ToastView(message: "Element selected", isShowing: .constant(true))
 }

@@ -10,16 +10,23 @@ import CommonUILib
 
 struct OperationModeSelectionView: View {
     @ObservedObject var viewModel: OperationModeSelectionViewModel
+    @State private var toastClosingTimer: Timer?
     
     init(viewModel: OperationModeSelectionViewModel) {
         self.viewModel = viewModel
     }
     
     var body: some View {
-        operationModesList
-            .task {
-                await viewModel.fetOperationModes()
+        ZStack {
+            operationModesList
+                .task {
+                    await viewModel.fetOperationModes()
+                }
+            VStack {
+                Spacer()
+                toastView
             }
+        }
     }
     
     private var operationModesList: some View {
@@ -33,8 +40,23 @@ struct OperationModeSelectionView: View {
             )
             .onTapGesture {
                 viewModel.willSelectMode(operationMode)
+                
+                withAnimation {
+                    viewModel.showToast = true
+                }
+                
+                toastClosingTimer?.invalidate()
+                toastClosingTimer = Timer.scheduledTimer(withTimeInterval: 4, repeats: false) { _ in
+                    withAnimation {
+                        viewModel.showToast = false
+                    }
+                }
             }
         }
+    }
+    
+    private var toastView: some View {
+        ToastView(message: viewModel.toastMessage, isShowing: $viewModel.showToast)
     }
 }
 

@@ -11,6 +11,8 @@ import Foundation
 class OperationModeSelectionViewModel: ObservableObject {
     @Published var operationModes: [OperationMode] = []
     @Published private(set) var selectedMode: OperationMode?
+    @Published var showToast = false
+    @Published private(set) var toastMessage: String = ""
     
     init(getOperationModesUseCase: GetOperationModesUseCase) {
         self.getOperationModesUseCase = getOperationModesUseCase
@@ -23,6 +25,7 @@ class OperationModeSelectionViewModel: ObservableObject {
     
     func willSelectMode(_ mode: OperationMode) {
         selectedMode = mode
+        toastMessage = mode.localized() + " selected"
     }
     
     private let getOperationModesUseCase: GetOperationModesUseCase
