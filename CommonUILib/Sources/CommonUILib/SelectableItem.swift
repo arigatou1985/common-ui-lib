@@ -116,37 +116,19 @@ public struct SelectableItem: View {
 }
 
 #Preview {
-    return List {
-        SelectableItem(
-            iconImage: UIImage(systemName: "star")!,
-            title: "Cotton Eco",
-            description: "Cupboard-dries cottons with maxi mum energy saving.",
-            isSelected: true,
-            isEnabled: true
-        )
-        
-        SelectableItem(
-            iconImage: UIImage(systemName: "star")!,
-            title: "Cotton Eco",
-            description: "Cupboard-dries cottons with maxi mum energy saving.",
-            isSelected: false,
-            isEnabled: true
-        )
-        
-        SelectableItem(
-            iconImage: UIImage(systemName: "star")!,
-            title: "Cotton Eco",
-            description: "Cupboard-dries cottons with maxi mum energy saving.",
-            isSelected: true,
-            isEnabled: false
-        )
-        
-        SelectableItem(
-            iconImage: UIImage(systemName: "star")!,
-            title: "Cotton Eco",
-            description: "Cupboard-dries cottons with maxi mum energy saving.",
-            isSelected: false,
-            isEnabled: false
-        )
+    List {
+        ForEach([true, false], id: \.self) {
+            isSelected in
+            ForEach([true, false], id: \.self) {
+                isEnabled in
+                SelectableItem(
+                    iconImage: UIImage(systemName: "star")!,
+                    title: "Cotton Eco",
+                    description: "Cupboard-dries cottons with maxi mum energy saving.",
+                    isSelected: isSelected,
+                    isEnabled: isEnabled
+                )
+            }
+        }
     }
 }
