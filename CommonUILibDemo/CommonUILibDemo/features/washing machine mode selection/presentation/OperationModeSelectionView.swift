@@ -28,9 +28,12 @@ struct OperationModeSelectionView: View {
                 iconImage: UIImage(named: operationMode.iconImageName())!,
                 title: operationMode.localized(),
                 description: operationMode.localizedDescription(),
-                isSelected: true,
+                isSelected: viewModel.selectedMode == operationMode,
                 isEnabled: true
             )
+            .onTapGesture {
+                viewModel.willSelectMode(operationMode)
+            }
         }
     }
 }

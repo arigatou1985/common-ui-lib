@@ -35,6 +35,7 @@ public struct SelectableItem: View {
         .frame(minHeight: LayoutConstants.minimumItemHeight)
         .listRowInsets(EdgeInsets(.zero))
         .opacity(isEnabled ? 1 : ColorConstants.disabledOpacity)
+        .contentShape(Rectangle())
     }
     
     private var icon: some View {
