@@ -16,7 +16,6 @@
 		3F14C17E2C7C86E7007EF89B /* UseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F14C17D2C7C86E7007EF89B /* UseCaseFactory.swift */; };
 		3F14C1802C7C8868007EF89B /* PreviewViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F14C17F2C7C8868007EF89B /* PreviewViewModelFactory.swift */; };
 		3F3E50572C7C81F20073184D /* CommonUILibDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3E50562C7C81F20073184D /* CommonUILibDemoApp.swift */; };
-		3F3E50592C7C81F20073184D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3E50582C7C81F20073184D /* ContentView.swift */; };
 		3F3E505B2C7C81F20073184D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F3E505A2C7C81F20073184D /* Assets.xcassets */; };
 		3F3E505E2C7C81F20073184D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F3E505D2C7C81F20073184D /* Preview Assets.xcassets */; };
 		3F3E50682C7C81F30073184D /* CommonUILibDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3E50672C7C81F30073184D /* CommonUILibDemoTests.swift */; };
@@ -51,7 +50,6 @@
 		3F14C17F2C7C8868007EF89B /* PreviewViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewModelFactory.swift; sourceTree = "<group>"; };
 		3F3E50532C7C81F20073184D /* CommonUILibDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CommonUILibDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F3E50562C7C81F20073184D /* CommonUILibDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonUILibDemoApp.swift; sourceTree = "<group>"; };
-		3F3E50582C7C81F20073184D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3F3E505A2C7C81F20073184D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F3E505D2C7C81F20073184D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3F3E50632C7C81F30073184D /* CommonUILibDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CommonUILibDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -157,7 +155,6 @@
 			children = (
 				3F14C16E2C7C8426007EF89B /* features */,
 				3F3E50562C7C81F20073184D /* CommonUILibDemoApp.swift */,
-				3F3E50582C7C81F20073184D /* ContentView.swift */,
 				3F3E505A2C7C81F20073184D /* Assets.xcassets */,
 				3F3E505C2C7C81F20073184D /* Preview Content */,
 			);
@@ -328,7 +325,6 @@
 			files = (
 				3F14C17E2C7C86E7007EF89B /* UseCaseFactory.swift in Sources */,
 				3F14C1762C7C84A5007EF89B /* OperationModeSelectionViewModel.swift in Sources */,
-				3F3E50592C7C81F20073184D /* ContentView.swift in Sources */,
 				3F3E50572C7C81F20073184D /* CommonUILibDemoApp.swift in Sources */,
 				3F14C1742C7C8480007EF89B /* OperationModeSelectionView.swift in Sources */,
 				3F14C1802C7C8868007EF89B /* PreviewViewModelFactory.swift in Sources */,

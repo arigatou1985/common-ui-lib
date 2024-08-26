@@ -10,8 +10,11 @@ import SwiftUI
 @main
 struct CommonUILibDemoApp: App {
     var body: some Scene {
+        let useCase = GetOperationModesUseCase(repository: StaticOperationModesRepository())
         WindowGroup {
-            ContentView()
+            OperationModeSelectionView(
+                viewModel: OperationModeSelectionViewModel(getOperationModesUseCase: useCase)
+            )
         }
     }
 }
