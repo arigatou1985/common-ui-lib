@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		3F14C16C2C7C82A7007EF89B /* CommonUILib in Frameworks */ = {isa = PBXBuildFile; productRef = 3F14C16B2C7C82A7007EF89B /* CommonUILib */; };
+		3F14C1742C7C8480007EF89B /* OperationModeSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F14C1732C7C8480007EF89B /* OperationModeSelectionView.swift */; };
+		3F14C1762C7C84A5007EF89B /* OperationModeSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F14C1752C7C84A5007EF89B /* OperationModeSelectionViewModel.swift */; };
+		3F14C1782C7C84DE007EF89B /* GetOperationModesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F14C1772C7C84DE007EF89B /* GetOperationModesUseCase.swift */; };
+		3F14C17A2C7C851B007EF89B /* OperationMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F14C1792C7C851B007EF89B /* OperationMode.swift */; };
+		3F14C17C2C7C86C3007EF89B /* StaticOperationModesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F14C17B2C7C86C3007EF89B /* StaticOperationModesRepository.swift */; };
+		3F14C17E2C7C86E7007EF89B /* UseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F14C17D2C7C86E7007EF89B /* UseCaseFactory.swift */; };
+		3F14C1802C7C8868007EF89B /* PreviewViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F14C17F2C7C8868007EF89B /* PreviewViewModelFactory.swift */; };
 		3F3E50572C7C81F20073184D /* CommonUILibDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3E50562C7C81F20073184D /* CommonUILibDemoApp.swift */; };
 		3F3E50592C7C81F20073184D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3E50582C7C81F20073184D /* ContentView.swift */; };
 		3F3E505B2C7C81F20073184D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F3E505A2C7C81F20073184D /* Assets.xcassets */; };
@@ -35,6 +42,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F14C1732C7C8480007EF89B /* OperationModeSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationModeSelectionView.swift; sourceTree = "<group>"; };
+		3F14C1752C7C84A5007EF89B /* OperationModeSelectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationModeSelectionViewModel.swift; sourceTree = "<group>"; };
+		3F14C1772C7C84DE007EF89B /* GetOperationModesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetOperationModesUseCase.swift; sourceTree = "<group>"; };
+		3F14C1792C7C851B007EF89B /* OperationMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationMode.swift; sourceTree = "<group>"; };
+		3F14C17B2C7C86C3007EF89B /* StaticOperationModesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticOperationModesRepository.swift; sourceTree = "<group>"; };
+		3F14C17D2C7C86E7007EF89B /* UseCaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseFactory.swift; sourceTree = "<group>"; };
+		3F14C17F2C7C8868007EF89B /* PreviewViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewModelFactory.swift; sourceTree = "<group>"; };
 		3F3E50532C7C81F20073184D /* CommonUILibDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CommonUILibDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F3E50562C7C81F20073184D /* CommonUILibDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonUILibDemoApp.swift; sourceTree = "<group>"; };
 		3F3E50582C7C81F20073184D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -73,6 +87,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F14C16E2C7C8426007EF89B /* features */ = {
+			isa = PBXGroup;
+			children = (
+				3F14C16F2C7C842E007EF89B /* washing machine mode selection */,
+			);
+			path = features;
+			sourceTree = "<group>";
+		};
+		3F14C16F2C7C842E007EF89B /* washing machine mode selection */ = {
+			isa = PBXGroup;
+			children = (
+				3F14C1702C7C8451007EF89B /* presentation */,
+				3F14C1712C7C8456007EF89B /* domain */,
+				3F14C1722C7C845B007EF89B /* data */,
+			);
+			path = "washing machine mode selection";
+			sourceTree = "<group>";
+		};
+		3F14C1702C7C8451007EF89B /* presentation */ = {
+			isa = PBXGroup;
+			children = (
+				3F14C1732C7C8480007EF89B /* OperationModeSelectionView.swift */,
+				3F14C1752C7C84A5007EF89B /* OperationModeSelectionViewModel.swift */,
+			);
+			path = presentation;
+			sourceTree = "<group>";
+		};
+		3F14C1712C7C8456007EF89B /* domain */ = {
+			isa = PBXGroup;
+			children = (
+				3F14C1772C7C84DE007EF89B /* GetOperationModesUseCase.swift */,
+				3F14C1792C7C851B007EF89B /* OperationMode.swift */,
+				3F14C17D2C7C86E7007EF89B /* UseCaseFactory.swift */,
+			);
+			path = domain;
+			sourceTree = "<group>";
+		};
+		3F14C1722C7C845B007EF89B /* data */ = {
+			isa = PBXGroup;
+			children = (
+				3F14C17B2C7C86C3007EF89B /* StaticOperationModesRepository.swift */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
 		3F3E504A2C7C81F20073184D = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +155,7 @@
 		3F3E50552C7C81F20073184D /* CommonUILibDemo */ = {
 			isa = PBXGroup;
 			children = (
+				3F14C16E2C7C8426007EF89B /* features */,
 				3F3E50562C7C81F20073184D /* CommonUILibDemoApp.swift */,
 				3F3E50582C7C81F20073184D /* ContentView.swift */,
 				3F3E505A2C7C81F20073184D /* Assets.xcassets */,
@@ -108,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				3F3E505D2C7C81F20073184D /* Preview Assets.xcassets */,
+				3F14C17F2C7C8868007EF89B /* PreviewViewModelFactory.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -265,8 +326,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F14C17E2C7C86E7007EF89B /* UseCaseFactory.swift in Sources */,
+				3F14C1762C7C84A5007EF89B /* OperationModeSelectionViewModel.swift in Sources */,
 				3F3E50592C7C81F20073184D /* ContentView.swift in Sources */,
 				3F3E50572C7C81F20073184D /* CommonUILibDemoApp.swift in Sources */,
+				3F14C1742C7C8480007EF89B /* OperationModeSelectionView.swift in Sources */,
+				3F14C1802C7C8868007EF89B /* PreviewViewModelFactory.swift in Sources */,
+				3F14C17A2C7C851B007EF89B /* OperationMode.swift in Sources */,
+				3F14C17C2C7C86C3007EF89B /* StaticOperationModesRepository.swift in Sources */,
+				3F14C1782C7C84DE007EF89B /* GetOperationModesUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +431,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = complete;
 			};
 			name = Debug;
 		};
@@ -418,6 +487,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_STRICT_CONCURRENCY = complete;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
