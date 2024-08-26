@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CommonUILib
 
 struct OperationModeSelectionView: View {
     @ObservedObject var viewModel: OperationModeSelectionViewModel
@@ -15,7 +16,22 @@ struct OperationModeSelectionView: View {
     }
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        operationModesList
+            .task {
+                await viewModel.fetOperationModes()
+            }
+    }
+    
+    private var operationModesList: some View {
+        List(viewModel.operationModes, id: \.id) { operationMode in
+            SelectableItem(
+                iconImage: UIImage(named: operationMode.iconImageName())!,
+                title: operationMode.localized(),
+                description: operationMode.localizedDescription(),
+                isSelected: true,
+                isEnabled: true
+            )
+        }
     }
 }
 

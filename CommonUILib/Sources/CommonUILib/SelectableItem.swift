@@ -39,6 +39,8 @@ public struct SelectableItem: View {
     
     private var icon: some View {
         Image(uiImage: iconImage)
+            .renderingMode(.template)
+            .foregroundColor(ColorConstants.iconTintColor)
             .frame(
                 width: LayoutConstants.iconSize,
                 height: LayoutConstants.iconSize
@@ -107,6 +109,7 @@ public struct SelectableItem: View {
     private struct ColorConstants {
         static let titleColor = Color("title_color", bundle: .module)
         static let subtitleColor = Color("subtitle_color", bundle: .module)
+        static let iconTintColor = Color("icon_tint_color", bundle: .module)
         static let disabledOpacity: Double = 0.4
     }
     
