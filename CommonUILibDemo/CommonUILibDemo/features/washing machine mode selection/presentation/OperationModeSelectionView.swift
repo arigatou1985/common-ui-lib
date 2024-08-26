@@ -63,5 +63,11 @@ struct OperationModeSelectionView: View {
 #Preview {
     return OperationModeSelectionView(
         viewModel: PreviewViewModelFactory.operationModeSelectionViewModel()
-    )
+    ).preferredColorScheme(.light)
+}
+
+#Preview {
+    return OperationModeSelectionView(
+        viewModel: PreviewViewModelFactory.operationModeSelectionViewModel()
+    ).preferredColorScheme(.dark)
 }

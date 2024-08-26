@@ -54,5 +54,9 @@ public struct ToastView: View {
 }
 
 #Preview {
-    ToastView(message: "Element selected", isShowing: .constant(true))
+    ToastView(message: "Element selected", isShowing: .constant(true)).preferredColorScheme(.light)
+}
+
+#Preview {
+    ToastView(message: "Element selected", isShowing: .constant(true)).preferredColorScheme(.dark)
 }
